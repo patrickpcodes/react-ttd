@@ -4,13 +4,15 @@
   "description": "First Test Project",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.24.3",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   },
   "dependencies": {
     "@babel/preset-env": "^7.24.4",
@@ -19,5 +21,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "save-dev": "^0.0.1-security"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "globals": {
+      "IS_REACT_ACT_ENVIRONMENT": true
+    }
   }
 }
